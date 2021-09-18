@@ -25,7 +25,7 @@ ${QT_CXXFLAGS} \
 bin_PROGRAMS = projectM-jack
 projectM_jack_SOURCES = qprojectM-jack.cpp ConfigFile.cpp ${EXTRA_SRCS}
 projectM_jack_LDADD = \
-  ../projectM-qt/libprojectM_qt.a \
+  ../projectM-qt/libprojectM_qt.la \
   ${jack_LIBS} \
   ${QT_LIBS} \
   ../libprojectM/libprojectM.la

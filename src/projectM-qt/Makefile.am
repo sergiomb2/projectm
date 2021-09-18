@@ -41,9 +41,7 @@ BUILT_SOURCES =               \
     ui_qpreseteditordialog.h \
     ui_qprojectmconfigdialog.h
 
-noinst_LIBRARIES = libprojectM_qt.a
-
-libprojectM_qt_a_SOURCES = \
+libprojectM_qt_la_SOURCES = \
 	qprojectm_mainwindow.cpp \
 	configfile.hpp configfile.cpp \
 	qplaylistfiledialog.cpp \
@@ -60,7 +58,7 @@ libprojectM_qt_a_SOURCES = \
 	application.qrc \
 	@srcdir@/images/*
 
-nodist_libprojectM_qt_a_SOURCES = \
+nodist_libprojectM_qt_la_SOURCES = \
 	application_qrc.cpp \
 	$(nodist_projectM_qt_moc_sources)
 
@@ -76,6 +74,12 @@ AM_CFLAGS = ${my_CFLAGS} \
 	-fvisibility=hidden \
 	-ffunction-sections \
 	-fdata-sections
+
+lib_LTLIBRARIES = libprojectM_qt.la
+
+# link flags
+libprojectM_qt_la_LDFLAGS = $(CG_LDFLAGS) -no-undefined -version-info 4:1:1
+
 
 CLEANFILES = \
 	application_qrc.cpp \

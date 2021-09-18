@@ -48,7 +48,7 @@ nodist_projectM_pulseaudio_SOURCES = \
 
 projectM_pulseaudio_LDADD = \
 	${libpulse_LIBS} \
-	../projectM-qt/libprojectM_qt.a \
+	../projectM-qt/libprojectM_qt.la \
 	../libprojectM/libprojectM.la \
 	${QT_LIBS}
 
