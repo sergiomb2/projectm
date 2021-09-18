@@ -85,3 +85,8 @@ CLEANFILES = \
 	application_qrc.cpp \
 	${BUILT_SOURCES} \
 	${nodist_projectM_qt_moc_sources}
+
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = libprojectM-qt.pc
+EXTRA_DIST = libprojectM-qt.pc.in
+CLEANFILES += libprojectM-qt.pc

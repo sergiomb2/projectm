@@ -78,6 +78,7 @@ AC_CONFIG_FILES([
   src/projectM-sdl/Makefile
   src/projectM-emscripten/Makefile
   src/projectM-qt/Makefile
+  src/projectM-qt/libprojectM-qt.pc
   src/projectM-pulseaudio/Makefile
   src/projectM-jack/Makefile
   src/projectM-test/Makefile
