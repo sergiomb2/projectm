@@ -1,4 +1,13 @@
-AC_INIT([projectM], [3.1.13], [me@mish.dev], [projectM], [https://github.com/projectM-visualizer/projectm/])
+m4_define([v_maj], [3])
+m4_define([v_min], [1])
+m4_define([v_mic], [13])
+m4_define([lt_cur], m4_eval(v_maj + v_min))
+m4_define([lt_rev], [v_mic])
+m4_define([lt_age], [v_min])
+version_info="lt_cur:lt_rev:lt_age"
+AC_SUBST([version_info])
+AC_INIT([projectM], [v_maj.v_min.v_mic], [me@mish.dev], [projectM], [https://github.com/projectM-visualizer/projectm/])
+
 AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects tar-pax])
 
 AX_IS_RELEASE([git-directory])

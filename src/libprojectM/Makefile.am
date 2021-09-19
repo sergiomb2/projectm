@@ -14,7 +14,7 @@ AM_CPPFLAGS = \
 lib_LTLIBRARIES = libprojectM.la  # public, possibly-shared library
 
 # link flags
-libprojectM_la_LDFLAGS = $(CG_LDFLAGS) -no-undefined -version-info 4:1:1
+libprojectM_la_LDFLAGS = $(CG_LDFLAGS) -no-undefined -version-info @version_info@
 
 # link libRenderer, MilkdropPresetFactory, NativePresetFactory, and libprojectM sources
 libprojectM_la_LIBADD = \

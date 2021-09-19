@@ -78,7 +78,7 @@ AM_CFLAGS = ${my_CFLAGS} \
 lib_LTLIBRARIES = libprojectM_qt.la
 
 # link flags
-libprojectM_qt_la_LDFLAGS = $(CG_LDFLAGS) -no-undefined -version-info 4:1:1
+libprojectM_qt_la_LDFLAGS = $(CG_LDFLAGS) -no-undefined -version-info @version_info@
 
 
 CLEANFILES = \
